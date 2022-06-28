@@ -28,10 +28,6 @@ h2 {
   width: 100px;
   z-index: -1;
   animation: entry 1.8s ease-in-out forwards, swing 3s ease-in-out 1.8s infinite alternate;
-
-  /* animation: entry 1s ease-in-out;
-  animation: swing 2.5s ease-in-out infinite alternate;
-  animation-delay: 2s; */
 }
 
 #plant1{
@@ -46,11 +42,15 @@ h2 {
   0%{
     top: -200px;
   }
-  40%{
+
+  30%{
     transform: scale(1.1);
   }
-  70%{
+  60%{
     transform: scale(1.2);
+  }
+  80%{
+    transform: scale(1.1);
   }
   100%{
     transform: scale(1);
@@ -138,7 +138,7 @@ h3.list-group-item {
 
 @media (max-width:490px){
   .plant{
-    width: 60px;
+    width: 58px;
   }
 
   #plant1{
