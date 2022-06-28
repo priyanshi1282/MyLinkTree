@@ -1,30 +1,92 @@
 body {
   font-family: "Baloo 2", cursive;
   font-size: 10pt;
- background-image: url(backgroung.png);
-  color: violet;
+ background-image: url(bg.jpg);
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+ color: brown;
+ height: 100vh;
+ width: 100vw;
+ overflow: hidden;
 }
+
+
 h1 {
   margin-top: 10px;
   font-size: 2.5em;
+  font-weight: bold;
 }
 h2 {
   font-size: 1.60em;
-  color: white;
+
 }
+
+
+.plant{
+  position: absolute;
+  width: 100px;
+  z-index: -1;
+  animation: entry 1.8s ease-in-out forwards, swing 3s ease-in-out 1.8s infinite alternate;
+
+  /* animation: entry 1s ease-in-out;
+  animation: swing 2.5s ease-in-out infinite alternate;
+  animation-delay: 2s; */
+}
+
+#plant1{
+  right: 15rem;
+}
+
+#plant2{
+  right: 7rem;
+}
+
+@keyframes entry{
+  from{
+    top: -200px;
+  }
+  to{
+    top: -5px;
+  }
+}
+
+@keyframes swing{
+  from{
+    transform: rotate(15deg);
+  }
+  to{
+    transform: rotate(-15deg);
+  }
+}
+
+.list-group{
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
 .list-group-item {
-  background-color: rgba(255, 255, 255, 0.829);
+  background-color: rgba(255, 255, 255, 0.795);
   font-size: 1.5em;
+  color: brown;
+  transition: .5s;
 }
+
+.list-group-item:hover{
+  font-weight: bold;
+  color: brown;
+  transform: scale(1,1.2);
+}
+
 h3.list-group-item {
   color: white;
-  background-color: rgba(110, 108, 110, 0.753);
-  font-weight: 300;
+  background-color: hsla(0, 59%, 41%, 0.795);
+  font-weight: bold;
   font-size: 1.25em;
   text-transform: uppercase;
   margin: 0;
   padding: 10px 15px 7px;
 }
+
 .list-group-item .icon-wrapper {
   display: inline-block;
   width: 35px;
@@ -38,3 +100,41 @@ h3.list-group-item {
 .list-group-item .icon-wrapper i {
   font-size: 1.5em;
 }
+
+
+
+@media (max-width:800px){
+  .plant{
+    width: 70px;
+  }
+
+ #plant1{
+  right: 10rem;
+ }
+
+ #plant2{
+  right: 5rem;
+ }
+
+}
+
+
+@media (max-width:600px){
+ #plant1{
+  right: 7rem;
+ }
+
+ #plant2{
+  right: 2rem;
+ }
+}
+
+@media (max-width:490px){
+  #plant1{
+    right: 3rem;
+   }
+  
+   #plant2{
+    right:-1rem;
+   }
+} 
