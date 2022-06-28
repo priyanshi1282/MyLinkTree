@@ -43,10 +43,17 @@ h2 {
 }
 
 @keyframes entry{
-  from{
+  0%{
     top: -200px;
   }
-  to{
+  40%{
+    transform: scale(1.1);
+  }
+  70%{
+    transform: scale(1.2);
+  }
+  100%{
+    transform: scale(1);
     top: -5px;
   }
 }
@@ -130,6 +137,10 @@ h3.list-group-item {
 }
 
 @media (max-width:490px){
+  .plant{
+    width: 60px;
+  }
+
   #plant1{
     right: 3.8rem;
    }
